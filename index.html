@@ -3,54 +3,57 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-
-  <title>HTML Test</title>
   <meta name="description" content="The HTML5 Project Description">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>HTML Test</title>
 
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index2.css">
 
 </head>
 
 <body role="document" aria-expanded="true" >
 
-    <header class="header" role="banner" aria-expanded="true" >
-        <img src="./splyt-icon.png" alt="Compny logo" >
+    <header class="title-header" class="header" role="banner">
         
-        <h2  role="heading" > HTML Demo Site</h2>
+        <ul class="menu-nav">
+            <li><img id="splyt-icon" src="./splyt-icon.png" alt="Company logo"></li>
+            <li>
+                <nav class="dropdown" role="navigation" aria-expanded="false">
+                <button class="dropbtn">Pages</button>
+                <div class="dropdown-content">
+                <a href="https://splyt.com/en/" role="link" >Splyt</a>
+                <a href="https://www.bbc.co.uk/" role="link" >BBC</a>
+                <a href="https://soundcloud.com/" role="link" >Soundcloud</a>
+                </div>
+                </nav>
+            <li><h2 id="site-header"role="heading"> HTML Demo Site</h2></li>
+            <li><p id="date" class="date"> </p></li>
+           
+          </ul>
 
-        <nav class="dropdown" role="navigation">
-            <button class="dropbtn">Pages</button>
-            <div class="dropdown-content">
-              <a href="https://splyt.com/en/" role="link" >Splyt</a>
-              <a href="https://www.bbc.co.uk/" role="link" >BBC</a>
-              <a href="https://soundcloud.com/" role="link" >Soundcloud</a>
-            </div>
-        </nav>
 
-        <p id="date" class="date"> </p>
     </header>
 
 
 
 <main class="main-body" role="main">
-       <h1 class="centered-header" role="heading" >
+       <h1  role="heading" >
         Page Title
        </h1>
        
-       <p class="centered-header">
+       <p class="page-text">
         Lots of different loads of text, describing text for text readers.
        </p>
 
        
-        <h3 class="centered-header" role="heading" >Data Table</h3>
+        <h3 role="heading" >Data</h3>
             <table class="users-table" role="table">
                 <thead>
                     <tr>
-                    <th role="rowheader" >Firstname</th>
-                    <th role="rowheader" >Lastname</th>
-                    <th role="rowheader" >Age</th>
+                    <th role="columnheader" >Firstname</th>
+                    <th role="columnheader" >Lastname</th>
+                    <th role="columnheader" >Age</th>
                     </tr>
                 </thead role="rowgroup">
                 <tbody role="rowgroup">
@@ -67,8 +70,8 @@
                 </tbody>
             </table>
 
-            <h3 role="heading" class="centered-header">Form</h3>
-            <form action="/action" class="form-table">
+            <h3 id="form-header" role="heading" >Form</h3>
+            <form action="/action" class="form">
                 <fieldset>
 
                     <label for="fname">First name:</label>
@@ -88,20 +91,20 @@
 
                 <label for="email-types">E-mail Type:</label>
             
-                    <input type="checkbox" id="marketing" name="marketing" role="checkbox" >
                     <label for="marketing"> Marketing</label>
+                    <input type="checkbox" id="marketing" name="marketing" role="checkbox" >
                     
-                    <input type="checkbox" id="digital" name="digital" role="checkbox" >
                     <label for="digital"> Digital</label>
+                    <input type="checkbox" id="digital" name="digital" role="checkbox" >
                     
-                    <input type="checkbox" id="3rd-party" name="3rd-party" role="checkbox" >
                     <label for="3rd-party"> 3rd-Party</label>
+                    <input type="checkbox" id="3rd-party" name="3rd-party" role="checkbox" >
                 </fieldset>
                 
                 <fieldset>
 
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" rows="5" cols="33" placeholder="Explain why you are joining..." role="textbox">
+                    <label for="description" class="description">Description:</label>
+                    <textarea id="description" name="description" rows="5" cols="80" value="description" placeholder="Explain why you are joining..." role="textbox" >
                     </textarea>
 
                 </fieldset>
@@ -110,14 +113,18 @@
                     <label for="group"
                     aria-required="true"
                     >Which Group would you like to join:</label>
+
+                    <label for="group-core">Core</label>
+                    <input type="radio" name="group" id="group-core" role="radio" >
+                    
+                    <label for="group-wgrab">WGrab</label>
                     <input type="radio" name="group" role="radio" >
-                    <label for="group">Core</label>
-                    <input type="radio" name="group"role="radio" >
-                    <label for="group">WGrab</label>
+                    
+                    <label for="group-wa">WAlipay</label>
                     <input type="radio" name="group" role="radio" >
-                    <label for="group">WAlipay</label>
-                    <input type="radio" name="group"  role="checkbox">
-                    <label for="group">TE</label>
+                    
+                    <label for="group-te">TE</label>
+                    <input type="radio" name="group"  role="radio">
                 </fieldset>
                 
             <input type="submit" value="Submit" class="submitbtn" role="button">
@@ -127,12 +134,15 @@
                 Copyright Splyt 2020 
             </footer>
     </div>
-
-</main>
-
     <div class="table-content">
         Table Content
     </div>
+    <!-- <div class="table-content">
+        Table Content
+    </div> -->
+
+</main>
+
 
 </body>
 <script>
