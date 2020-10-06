@@ -21,7 +21,7 @@
         <h2  role="heading" > HTML Demo Site</h2>
 
         <nav class="dropdown" role="navigation">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Pages</button>
             <div class="dropdown-content">
               <a href="https://splyt.com/en/" role="link" >Splyt</a>
               <a href="https://www.bbc.co.uk/" role="link" >BBC</a>
@@ -39,7 +39,7 @@
         Page Title
        </h1>
        
-       <p>
+       <p class="centered-header">
         Lots of different loads of text, describing text for text readers.
        </p>
 
@@ -72,10 +72,12 @@
                 <fieldset>
 
                     <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="John" role="textbox">
+                    <input type="text" id="fname" name="fname" placeholder="John" role="textbox" 
+                    aria-labelledby="fname">
                     
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="e-mail adress" placeholder="Doe@doe.com" role="textbox">
+                    <input type="email" id="email" name="e-mail adress" placeholder="Doe@doe.com" role="textbox"
+                    aria-labelledby="email">
                     
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age" placeholder="18+" min="18" role="spinbutton" aria-valuemin="18" aria-valuemax="95">
@@ -84,9 +86,8 @@
                 
                 <fieldset>
 
-                
                 <label for="email-types">E-mail Type:</label>
-                <!-- aria-checked="false"  -->
+            
                     <input type="checkbox" id="marketing" name="marketing" role="checkbox" >
                     <label for="marketing"> Marketing</label>
                     
