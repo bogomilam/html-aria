@@ -1,16 +1,19 @@
-/* .header {
-    text-align:center;
-    float:center;
-    color:blue;
-    display: inline-block;
-    position: absolute;
-    width: 100%
-} */
 
+.header {
+    column-count: 2;
+    column-gap: 20px;
+    /* height: 350px; */
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+}
 
+.centered-header {
+    text-align: center;
+}
 .users-table {
     border-style: dotted;
     width: 100%;
+    text-align: center;
 }
 
 .table-head {
@@ -20,16 +23,17 @@
 .form-table {
     border-style: double;
     width: 100%;
+    /* margin-top: 40px; */
 }
 
 .main-body {
     vertical line;
     border-left: 6px solid blue;
-    height: 755px;
+    height: 555px;
     position: relative;
     left: 20%;
     margin-left: -3px;
-    top: 300px;
+    top: 100px;
 }
 
 .table-content {
@@ -49,6 +53,14 @@
 }
 
 .dropbtn {
+    background-color: #2cb3d4;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .submitbtn {
     background-color: #2cb3d4;
     color: white;
     padding: 16px;
